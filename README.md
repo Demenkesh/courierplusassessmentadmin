@@ -55,4 +55,4 @@ To access the api of the project.
 
 ## 7. Login details
 'email' => 'bigture123@example.com',
-'password' => Hash::make('courierplus123123123@@@'),
+'password' => courierplus123123123@@@,
