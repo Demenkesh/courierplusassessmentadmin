@@ -5,7 +5,7 @@ Follow the steps below to properly set up the database and seed initial data for
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Demenkesh/courierplusassessment.git
+git clone https://github.com/Demenkesh/courierplusassessmentadmin.git
 ```
 
 ```bash
@@ -24,7 +24,10 @@ composer update
 
 ## 4. Set Up Environment Configuration
 
-Copy the .env.example file and update the necessary environment variables:
+Copy the .env.example file and update the necessary environment variables:, Please the env will be the same with the  
+```bash
+https://github.com/Demenkesh/courierplusassessment/blob/main/.env.example
+```
 
 ```bash
 cp .env.example .env
@@ -44,21 +47,12 @@ Update your .env file with your database and other environment-specific configur
 php artisan migrate
 ```
 
-## 6. Seed the Database
 
-Seed the default user and tenant data:
+## 6. View the Login page
 
-```bash
-php artisan db:seed
-```
-
-## 7. View the documentation
-
-Replace {{your-app-url}} with your actual domain or local environment URL (e.g., http://localhost:8000/api/documentation).
+Replace {{your-app-url}} with your actual domain or local environment URL (e.g., http://localhost:8000/login).
 To access the api of the project.
 
-## 8. View the documentation
-
-Replace {{ tenant123 }} with your tenant name you create in your env file
-
-L5_SWAGGER_CONST_HOST1="http://${APP_URLs}/tenant123"
+## 7. Login details
+'email' => 'bigture123@example.com',
+'password' => Hash::make('courierplus123123123@@@'),
