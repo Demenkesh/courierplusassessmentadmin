@@ -33,8 +33,7 @@ class LoginController extends Controller
     {
         if (Auth::user()->role_as == '1') //1 = Admin Login
         {
-            // return redirect('admin/show')->with('message','WELCOME TO YOUR DASHBOARD');
-            return redirect('admin/show')->with('status', 'WELCOME TO YOUR DASHBOARD');
+            return redirect('admin/approve-user')->with('status', 'WELCOME TO YOUR DASHBOARD');
         } elseif (Auth::user()->role_as == '0') // Normal or Default User Login
         {
             Auth::logout();

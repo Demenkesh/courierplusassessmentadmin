@@ -6,8 +6,12 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', function () {
+    // return view('auth.login');
+    // return redirect()->route('login');
     return redirect('/login');
 });
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+
 Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::post('admin/logout', [LoginController::class, 'logout'])->name('admin.logout');

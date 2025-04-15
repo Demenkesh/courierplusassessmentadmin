@@ -42,8 +42,7 @@ class ResetPasswordController extends Controller
     {
         if(Auth::user()->role_as == '1') //1 = Admin Login
         {
-            // return redirect('admin/show')->with('message','WELCOME TO YOUR DASHBOARD');
-            return 'admin/show';
+            return 'admin/approve-user';
         }
     }
 }
